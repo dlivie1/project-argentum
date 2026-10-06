@@ -2,6 +2,9 @@
 
 Short, dated progress notes. Newest first.
 
+## 2026-10-06
+- **Update helper:** set up an automated helper that proposes updates to this write-up as pull requests, which I review before anything is published.
+
 ## 2026-10-05
 - Published this write-up.
 
