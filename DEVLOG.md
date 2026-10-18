@@ -2,6 +2,13 @@
 
 Short, dated progress notes. Newest first.
 
+## 2026-10-18
+- **Phase 3b:** closed it out. The scope is frozen and the golden-file checks are in place, so the strategy's outputs are pinned against accidental change.
+- **Golden files:** extended them, add-only, with a few inputs the dashboard needs, and pinned the check inside tracked test code.
+- **Change rules:** wrote down the rules for what may change between now and going live, and tidied the builder's working rules and repository map.
+- **Scheduled-task outage:** traced a one-off gap in the scheduled runs to its cause. It's explained and resolved.
+- **Task move:** decided to leave the scheduled tasks where they are for now; that move now belongs to Phase 3c.
+
 ## 2026-10-06
 - **Update helper:** set up an automated helper that proposes updates to this write-up as pull requests, which I review before anything is published.
 

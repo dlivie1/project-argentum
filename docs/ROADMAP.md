@@ -34,8 +34,6 @@ Each phase starts only when the one before it is clean. Dates are estimates; qua
 - **The move:** the repository went into a project folder that will also hold its independent reviewer. It was planned in three parts, because a Claude Code session can't move the folder it's running in: prepare, then move by hand, then a new session finishes up.
 - **The backup:** a private GitHub repository, with a pre-push hook that scans outgoing commits.
 
-## Next
-
 ### Phase 3b: multi-strategy platform
 - **Stage A:** reorganize the code so several strategies can run side by side, each with its own config, kill switches, health rating and tax scope. A crash in one never affects another.
 - **Stage B:** multi-coin plumbing, plus a research-safe coin check tool. It reports data quality and liquidity only, never backtest performance, so coins are never picked by past returns.
@@ -43,6 +41,9 @@ Each phase starts only when the one before it is clean. Dates are estimates; qua
   - zero behavior change, proven with golden files after every step;
   - a scope freeze, meaning no new features;
   - any journal migration must be reversible and tested on a copy first.
+- **Closed:** the scope freeze and the golden-file checks are in place. Moving the scheduled tasks was left for Phase 3c.
+
+## Next
 
 ### Phase 3c: the QC loop
 - **Build the Censor:** a scheduled, read-only Claude Code reviewer with cost and usage tracking.
