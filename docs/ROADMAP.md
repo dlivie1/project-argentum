@@ -34,20 +34,18 @@ Each phase starts only when the one before it is clean. Dates are estimates; qua
 - **The move:** the repository went into a project folder that will also hold its independent reviewer. It was planned in three parts, because a Claude Code session can't move the folder it's running in: prepare, then move by hand, then a new session finishes up.
 - **The backup:** a private GitHub repository, with a pre-push hook that scans outgoing commits.
 
+### Phase 3b: engine readiness
+- **Golden files:** D1's outputs, generated once and stored with a hash. Every later change is checked against them, and any unexplained difference stops the work.
+- **Change rules until live:** while D1's forward test runs, the code changes only for a few shared support tools (the reviewer, the helper that updates this write-up, a shared Telegram sender), approved review fixes and the simulated-clock harness. Fewer changes mean less risk to the test.
+- **A tidy-up** of the builder's working rules, plus a map of the repository for the reviewer.
+- **Replaced plan:** the multi-strategy platform and multi-coin plumbing planned for this phase were cancelled, for the same reason: they would have changed a lot of code in the middle of the forward test.
+
 ## Next
 
-### Phase 3b: multi-strategy platform
-- **Stage A:** reorganize the code so several strategies can run side by side, each with its own config, kill switches, health rating and tax scope. A crash in one never affects another.
-- **Stage B:** multi-coin plumbing, plus a research-safe coin check tool. It reports data quality and liquidity only, never backtest performance, so coins are never picked by past returns.
-- **The constraints:**
-  - zero behavior change, proven with golden files after every step;
-  - a scope freeze, meaning no new features;
-  - any journal migration must be reversible and tested on a copy first.
-
 ### Phase 3c: the QC loop
-- **Build the Censor:** a scheduled, read-only Claude Code reviewer with cost and usage tracking.
+- **Connect the Censor:** the scheduled, read-only Claude Code reviewer is built, in its own repository; this phase points it at the bot's code.
 - **Install the triage protocol:** verdicts with evidence, behavior-impact labels, and a disputes log.
-- **Then:** triage the first full review and fix the approved findings, at most one batch per day, each followed by a clean shadow check.
+- **Then:** triage the first full review and fix the approved findings, at most one batch per day, each followed by a clean shadow check. The findings Phase 3b recorded are settled here too.
 
 ### Phase 3d: simulated-clock harness
 Run the bot's real code through months of scheduled runs in minutes, using a fake clock and replayed data. Scenarios include:
