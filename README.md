@@ -6,7 +6,7 @@ A rules-based crypto trading bot, **Argentarius**, built almost entirely with Cl
 - every decision is logged;
 - an AI reviewer checks the AI builder.
 
-**Status (October 2026):** paper trading (forward test) · Kraken spot · BTC and ETH · next up: the multi-strategy platform (Phase 3b).
+**Status (October 2026):** paper trading (forward test) · Kraken spot · BTC and ETH · next up: connecting the automated reviewer (Phase 3c).
 
 > This repository is a write-up of a personal project. The bot's code lives in a private repository; this one explains how it works and how it was built. Nothing here is financial advice, and no real money is trading yet.
 
@@ -95,8 +95,8 @@ More detail: [docs/WORKFLOW.md](docs/WORKFLOW.md) · sample prompts: [docs/promp
 | D1 | Pre-registered daily trend strategy; did not pass all gates, so it runs as a forward test | Done |
 | Paper operations | Daily job, Telegram, dashboard, security hardening, tax-reserve estimates | Done |
 | Folder move and backup | Repository moved into a project folder that will also hold its reviewer; private GitHub backup with a pre-push secret check | Done |
-| Phase 3b | Multi-strategy platform and multi-coin plumbing, with zero behavior change | Next |
-| Phase 3c | The automated reviewer (the Censor) and the triage loop | Planned |
+| Phase 3b | Engine readiness: golden files that pin the strategy's outputs, the change rules until live, and a tidy-up of the builder's rules. It replaced the multi-strategy platform, cancelled so the forward test isn't disturbed | Done |
+| Phase 3c | Connect the automated reviewer (the Censor), install the triage loop, and fix what it finds | Next |
 | Phase 3d | Simulated-clock harness: months of scheduled runs in minutes | Planned |
 | Clean paper | 14 days on the final code before any real money | Planned |
 | Phase 4 | Linux server and small live trading | Planned |
