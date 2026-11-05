@@ -2,6 +2,9 @@
 
 Short, dated progress notes. Newest first.
 
+## 2026-11-05
+- **Triage protocol:** wrote down the triage protocol for Phase 3c, which sets how each review finding gets a verdict backed by evidence.
+
 ## 2026-10-06
 - **Update helper:** set up an automated helper that proposes updates to this write-up as pull requests, which I review before anything is published.
 
