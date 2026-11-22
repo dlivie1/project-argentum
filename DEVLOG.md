@@ -2,6 +2,9 @@
 
 Short, dated progress notes. Newest first.
 
+## 2026-11-22
+- **Messaging:** switched the bot's Telegram messages over to the shared Telegram sender, as planned, after approving the switch-over.
+
 ## 2026-11-15
 - **Decisions:** logged a batch of decisions on trading and operations: capping fallback market buys by available cash, a manual way to stop new entries in paper and live, a tolerance and running total for small balance differences, keying cost records to the fill, and keeping amounts out of broadcast messages.
 - **Order handling:** tightened how the bot treats orders whose outcome is uncertain. It never resends a market order whose result is unknown, and a stop keeps one identity until its outcome is known. It also checks for a halt before each order and keeps a position protected when a flatten can't complete.
